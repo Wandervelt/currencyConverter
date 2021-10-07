@@ -1,38 +1,81 @@
-.App {
+.card {
+  height: 20rem;
+  padding: 4rem;
+  margin: 7rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: rgb(241, 241, 241);
+}
+.title {
   text-align: center;
+  font-size: 3.5em;
+  margin-bottom: 40px;
+  font-family: "Cursive";
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.conversion {
+  display: grid;
+  row-gap: 4px;
+  column-gap: 30px;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) auto minmax(
+      100px,
+      1fr
+    );
+  font-weight: 600;
+  color: rgb(20, 30, 55);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown-swap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  width: 40rem;
+  margin-left: 3rem;
+}
+.dropdown {
+  width: 17rem;
+}
+.amount {
+  width: 100%;
+  max-width: 40rem;
+  padding: 0.5rem;
+}
+.amount.invalid {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  margin: 8px 15px 0px 15px;
+  padding: 20px;
+  background-color: #cfd7c7;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.button:hover,
+.button:active {
+  color: #000000;
+  background-color: rgb(241, 241, 241);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:focus {
+  outline: none;
+}
+.value {
+  max-height: 10rem;
+}
+
+.currencyToConvert {
+  color: rgb(92, 102, 123);
+  font-weight: 600;
+  font-size: 1.4rem;
+  max-width: 100%;
+}
+.convertedCurrency {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(46, 60, 87);
+}
+.error-text {
+  color: #b40e0e;
 }
