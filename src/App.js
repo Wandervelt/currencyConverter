@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExchangeAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import { faExchangeAlt } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 function App() {
@@ -104,6 +105,13 @@ function App() {
           )} ${convertToCurrency.toUpperCase()}`}{" "}
         </p>
       </div>
+      <a
+        href="https://github.com/Wandervelt/currencyConverter"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon className="githubIcon" icon={faGithub} size="3x" />
+      </a>
     </div>
   );
 }

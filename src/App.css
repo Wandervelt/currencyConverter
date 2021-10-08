@@ -11,6 +11,7 @@
   font-size: 3.5em;
   margin-bottom: 40px;
   font-family: "Cursive";
+  font-weight: lighter;
 }
 .conversion {
   display: grid;
@@ -78,4 +79,25 @@
 }
 .error-text {
   color: #b40e0e;
+}
+.githubIcon {
+  position: absolute;
+  bottom: 105px;
+  left: 48%;
+  background-color: rgb(241, 241, 241);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.githubIcon:hover,
+.githubIcon:active {
+  color: #000000;
+  background-color: rgb(194, 193, 193);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
 }
